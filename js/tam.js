@@ -678,6 +678,9 @@ function convert_tam_utf2wx(text) {
 //	unicodeValue["\u0B81"] = 'z';	//z
 	unicodeValue["\u0BB3"] = 'lY';
 	unicodeValue["\u0BC5"] = 'EY';
+	unicodeValue["\u0BB3"] = 'lYY';
+	unicodeValue["\u0BA9"] = 'nY';
+	unicodeValue["\u0BB1"] = 'rY';
 	unicodeValue["\u0BC6"] = 'eV';
 	unicodeValue["\u0BC9"] = 'OY';
 	unicodeValue["\u0BCA"] = 'oV';
