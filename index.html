@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>wx-utf conversion</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/tel.js"></script>
+		<script src="js/tam.js"></script>
+		<script src="js/hin.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist/css/bootstrap.css" />
+		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.js" ></script>
+		<link rel="stylesheet" href="css/w3.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h3 align="center">Indian Languages convertor</h3>
+				<div class="col-6">
+
+				<textarea class="form-control" rows="10" cols="115" id="input"> </textarea>
+				</div>
+				<div class="col-6">
+				<textarea class="form-control" rows="10" cols="115" id="output"> </textarea>
+			</div>
+			<div class="btn-group col-5">
+				<select id="lang" class="form-control">
+					<option value="tel">Telugu</option>
+					<option value="hin">Hindi</option>
+					<option value="tam">Tamil</option>
+				</select>
+				<button class="btn btn-primary" type="button" id="submit" onclick="convert1();">utf2wx</button>
+				<button class="btn btn-primary" type="button" id="submit" onclick="convert2();">wx2utf</button>
+			</div>
+			</div>
+
+		</div>
+	</body>
+</html>
