@@ -18,7 +18,7 @@ function convert_tel_wx2utf(text) {
 	unicodeValue_vowels["o"]='\u0C13';
 	unicodeValue_vowels["O"]='\u0C14';
 	
-	unicodeValue_vowels["aa"] = '\u0C05';	//a
+	// unicodeValue_vowels["aa"] = '\u0C05';	//a
 	unicodeValue_vowels["aA"]='\u0C06';
 	unicodeValue_vowels["ai"]='\u0C07';
 	unicodeValue_vowels["aI"]='\u0C08';
@@ -528,6 +528,44 @@ function convert_tel_wx2utf(text) {
 	text = text.replace(r1, function() {
 		return unicodeValue_vowels["oY"];
 	});
+
+	var r1 = /aA/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["aA"];
+	});
+	var r1 = /ai/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["ai"];
+	});
+	var r1 = /aI/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["aI"];
+	});
+	var r1 = /au/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["au"];
+	});
+	var r1 = /aU/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["au"];
+	});
+	var r1 = /ae/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["ae"];
+	});
+	var r1 = /aE/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["aE"];
+	});
+	var r1 = /ao/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["ao"];
+	});
+	var r1 = /aO/g;
+	text = text.replace(r1, function() {
+		return unicodeValue_vowels["aO"];
+	});
+
 	console.log("Iam here"+text);
 	text = text.replace(/([A-z])/g, function(a) {
 		//console.log(a);
