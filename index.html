@@ -6,9 +6,11 @@
 		<script src="js/tel.js"></script>
 		<script src="js/tam.js"></script>
 		<script src="js/hin.js"></script>
+		<script src="js/romanwx.js"></script>
 		<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist/css/bootstrap.css" />
 		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.js" ></script>
 		<link rel="stylesheet" href="css/w3.css">
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<div class="container">
@@ -16,22 +18,25 @@
 				<h3 align="center">Indian Languages convertor</h3>
 				<div class="col-6">
 
-				<textarea class="form-control" rows="10" cols="115" id="input"> </textarea>
+					<textarea class="form-control" rows="10" cols="115" id="input"> </textarea>
 				</div>
 				<div class="col-6">
-				<textarea class="form-control" rows="10" cols="115" id="output"> </textarea>
-			</div>
-			<div class="btn-group col-5">
+					<textarea class="form-control" rows="10" cols="115" id="output"> </textarea>
+				</div>
+			<div class="btn-group col-10">
 				<select id="lang" class="form-control">
 					<option value="tel">Telugu</option>
 					<option value="hin">Hindi</option>
 					<option value="tam">Tamil</option>
 				</select>
-				<button class="btn btn-primary" type="button" id="submit" onclick="convert1();">utf2wx</button>
-				<button class="btn btn-primary" type="button" id="submit" onclick="convert2();">wx2utf</button>
+				<button class="btn btn-primary" type="button" id="submit" onclick="convert_utf2wx();">Unicode2WX</button>
+				<button class="btn btn-primary" type="button" id="submit" onclick="convert_wx2utf();">WX2Unicode</button>
+				<button class="btn btn-info" type="button" id="submit" onclick="convert_roman2utf();">Roman2Unicode</button>
+				<button class="btn btn-info" type="button" id="submit" onclick="convert_utf2roman();">Unicode2Roman</button>
+				<button class="btn btn-danger" type="button" id="submit" onclick="convert_roman2wx();">Roman2WX</button>
+				<button class="btn btn-danger" type="button" id="submit" onclick="convert_wx2roman();">WX2Roman</button>
+				<button class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();"><<--->></i></button>
 			</div>
-			</div>
-
 		</div>
 	</body>
 </html>

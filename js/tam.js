@@ -1,6 +1,6 @@
 //tamil-wx2utf
+//console.log = function() {};
 function convert_tam_wx2utf(text) {
-    console.log(text);
 	//var text = $("#input").val();
 	
 	var unicodeValue = new Array();
@@ -782,7 +782,7 @@ function convert_tam_wx2utf(text) {
 			return a;
 		}
 	});
-	console.log("Iam here2"+text);
+	
 	text = text.replace(/([A-z])+/g, function(a) {
 		if(a in unicodeValue) {
 			return chr = unicodeValue[a];
@@ -790,7 +790,7 @@ function convert_tam_wx2utf(text) {
 			return a;
 		}
 	});
-	console.log("Iam here3"+text);
+	
 	return text;
 	//$("#output").val(text);
 

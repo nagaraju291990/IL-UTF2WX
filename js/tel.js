@@ -566,7 +566,7 @@ function convert_tel_wx2utf(text) {
 		return unicodeValue_vowels["aO"];
 	});
 
-	console.log("Iam here"+text);
+	// console.log("Iam here"+text);
 	text = text.replace(/([A-z])/g, function(a) {
 		//console.log(a);
 		//if(typeof unicodeValue_vowels[a] != "undefined") 
@@ -584,7 +584,7 @@ function convert_tel_wx2utf(text) {
 			return a;
 		}
 	});
-	console.log("Iam here3"+text);
+	// console.log("Iam here3"+text);
 	return text;
 	//$("#output").val(text);
 
