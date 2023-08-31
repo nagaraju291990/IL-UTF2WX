@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>wx-utf conversion</title>
+		<title>Conversion for Indian Languages. Formats supported are WX,Phonemic(Roman), Unicode</title>
 		<script src="js/jquery.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/tel.js"></script>
@@ -15,7 +15,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<h3 align="center">Indian Languages convertor</h3>
+				<h3 align="center">Indian Languages convertor Unicode/WX/Phonemic(Roman)</h3>
 				<div class="col-6">
 
 					<textarea class="form-control" rows="10" cols="115" id="input"> </textarea>
@@ -23,7 +23,7 @@
 				<div class="col-6">
 					<textarea class="form-control" rows="10" cols="115" id="output"> </textarea>
 				</div>
-			<div class="btn-group col-10">
+			<div class="btn-group col-12">
 				<select id="lang" class="form-control">
 					<option value="tel">Telugu</option>
 					<option value="hin">Hindi</option>
@@ -31,10 +31,10 @@
 				</select>
 				<button class="btn btn-primary" type="button" id="submit" onclick="convert_utf2wx();">Unicode2WX</button>
 				<button class="btn btn-primary" type="button" id="submit" onclick="convert_wx2utf();">WX2Unicode</button>
-				<button class="btn btn-info" type="button" id="submit" onclick="convert_roman2utf();">Roman2Unicode</button>
-				<button class="btn btn-info" type="button" id="submit" onclick="convert_utf2roman();">Unicode2Roman</button>
-				<button class="btn btn-danger" type="button" id="submit" onclick="convert_roman2wx();">Roman2WX</button>
-				<button class="btn btn-danger" type="button" id="submit" onclick="convert_wx2roman();">WX2Roman</button>
+				<button class="btn btn-info" type="button" id="submit" onclick="convert_roman2utf();">Phonemic2Unicode</button>
+				<button class="btn btn-info" type="button" id="submit" onclick="convert_utf2roman();">Unicode2Phonemic</button>
+				<button class="btn btn-danger" type="button" id="submit" onclick="convert_roman2wx();">Phonemic2WX</button>
+				<button class="btn btn-danger" type="button" id="submit" onclick="convert_wx2roman();">WX2Phonemic</button>
 				<button class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();"><<--->></i></button>
 			</div>
 		</div>
