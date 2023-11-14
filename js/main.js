@@ -1,6 +1,8 @@
 function utf2wx(lang, text){
 	if(lang == "tel") {
 		out = convert_tel_utf2wx(text);
+	} else if(lang == "mal") {
+			out = convert_mal_utf2wx(text);
 	} else if(lang == "tam") {
 		out = convert_tam_utf2wx(text);
 	} else {
@@ -13,6 +15,8 @@ function wx2utf(lang, text) {
 		out = convert_tel_wx2utf(text);
 	} else if(lang == "tam") {
 		out = convert_tam_wx2utf(text);
+	} else if(lang == "mal") {
+		out = convert_mal_wx2utf(text);
 	} else {
 		out = convert_hin_wx2utf(text);
 	}
