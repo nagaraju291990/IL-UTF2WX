@@ -17,33 +17,37 @@
 			<div class="row">
 				<div class="col-11">
 					<h3 align="center">Indian Languages convertor </h3>
-					<h6 align="center">Unicode<=>WX<=>Phonemic(Roman)<=>Unicode</h6>
+					<h6 align="center">Unicode&lt;=&gt;WX&lt;=&gt;Phonemic(Roman)&lt;=&gt;Unicode</h6>
 				</div>
 				<div class="col-1">
-					<span style="font-size: 12px;">Version 2.0</span>
+					<span style="font-size: 12px;">Version 2.2</span>
 				</div
 			</div>
-			<div class="row">
-				<div class="col-6">
-					<textarea spellcheck="false" class="form-control" rows="10" cols="115" id="input"> </textarea>
-				</div>
-				<div class="col-6">
-					<textarea spellcheck="false" class="form-control" rows="10" cols="115" id="output"> </textarea>
-				</div>
-			</div>
-			<div class="btn-group col-12">
+			<div class="col-3">
 				<select id="lang" class="form-control">
 					<option value="hin">Hindi</option>
 					<option value="tam">Tamil</option>
 					<option value="tel">Telugu</option>
 				</select>
-				<button class="btn btn-primary" type="button" id="submit" onclick="convert_utf2wx();">Unicode2WX</button>
-				<button class="btn btn-primary" type="button" id="submit" onclick="convert_wx2utf();">WX2Unicode</button>
-				<button class="btn btn-info" type="button" id="submit" onclick="convert_roman2utf();">Phonemic2Unicode</button>
-				<button class="btn btn-info" type="button" id="submit" onclick="convert_utf2roman();">Unicode2Phonemic</button>
-				<button class="btn btn-danger" type="button" id="submit" onclick="convert_roman2wx();">Phonemic2WX</button>
-				<button class="btn btn-danger" type="button" id="submit" onclick="convert_wx2roman();">WX2Phonemic</button>
-				<button class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();"><<--->></i></button>
+			</div>
+			<div class="row">
+				<div class="col-5">
+					<textarea spellcheck="false" class="form-control" rows="10" cols="115" id="input"> </textarea>
+				</div>
+				<div class="btn-group-vertical col-2">
+					<button class="btn btn-primary" type="button" id="submit" onclick="convert_utf2wx();">Unicode2WX</button>
+					<button class="btn btn-primary" type="button" id="submit" onclick="convert_wx2utf();">WX2Unicode</button>
+					<button class="btn btn-info" type="button" id="submit" onclick="convert_roman2utf();">Phonemic2Unicode</button>
+					<button class="btn btn-info" type="button" id="submit" onclick="convert_utf2roman();">Unicode2Phonemic</button>
+					<button class="btn btn-danger" type="button" id="submit" onclick="convert_roman2wx();">Phonemic2WX</button>
+					<button class="btn btn-danger" type="button" id="submit" onclick="convert_wx2roman();">WX2Phonemic</button>
+					<button title="Swap input and output text" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
+				</div>
+				<div class="col-5">
+					<textarea spellcheck="false" class="form-control" rows="10" cols="115" id="output"> </textarea>
+				</div>
+			</div>
+			<div class="">
 			</div>
 		</div>
 	</body>
