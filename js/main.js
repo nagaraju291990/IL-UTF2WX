@@ -7,6 +7,8 @@ function utf2wx(lang, text){
 			out = convert_kan_utf2wx(text);
 	} else if(lang == "ori") {
 			out = convert_ori_utf2wx(text);
+	} else if(lang == "pan") {
+			out = convert_pan_utf2wx(text);
 	} else if(lang == "tam") {
 		out = convert_tam_utf2wx(text);
 	} else {
@@ -25,6 +27,8 @@ function wx2utf(lang, text) {
 		out = convert_kan_wx2utf(text);
 	} else if(lang == "ori") {
 		out = convert_ori_wx2utf(text);
+	} else if(lang == "pan") {
+		out = convert_pan_wx2utf(text);
 	} else {
 		out = convert_hin_wx2utf(text);
 	}
