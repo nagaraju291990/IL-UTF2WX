@@ -84,3 +84,17 @@ function interchangeInpOut(){
 	$("#input").val(o);
 	$("#output").val(i);
 }
+
+function reset(){
+	if (confirm('Are you sure you want to clear input and output text?')) {
+		// Save it!
+		//console.log('Thing was saved to the database.');
+
+		$("#input").val("");
+		$("#output").val("");
+	  } else {
+		// Do nothing!
+		//console.log('Thing was not saved to the database.');
+	  }
+	//$("#lang").val("");
+}
