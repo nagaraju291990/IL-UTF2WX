@@ -23,26 +23,34 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-11">
-					<h3 align="center">Indian Languages convertor </h3>
+				<div class="col-12">
+					<h3 align="center">Indian Language Transliteration Tool </h3>
 					<h6 align="center">Unicode&lt;=&gt;WX&lt;=&gt;Phonemic(Roman)&lt;=&gt;Unicode</h6>
 				</div>
-				<div class="col-1">
+				<div style="margin-left: 90%;" class="col-1">
 					<span style="font-size: 12px;">Version 3.0</span>
 				</div>
 			</div>
-			<div class="col-3">
-				<select id="lang" class="form-control">
-					<option value="hin">Hindi</option>
-					<option value="kan">Kannada</option>
-					<option value="mal">Malayalam</option>
-					<option value="ori">Oriya</option>
-					<option value="pan">Punjabi</option>
-					<option value="tam">Tamil</option>
-					<option value="tel">Telugu</option>
-				</select>
-			</div>
 			<div class="row">
+				<div class="col-3">
+					<select id="lang" class="form-select">
+						<option value="hin">Hindi</option>
+						<option value="kan">Kannada</option>
+						<option value="mal">Malayalam</option>
+						<option value="ori">Oriya</option>
+						<option value="pan">Punjabi</option>
+						<option value="tam">Tamil</option>
+						<option selected value="tel">Telugu</option>
+					</select>
+				</div>
+				<div class="col-2">
+					<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
+					<label class="form-check-label" for="numbersConvert">
+						Convert Numbers
+  					</label>
+				</div>
+			</div>
+			<div style="margin-top: 1%;;" class="row">
 				<div class="col-sm-5">
 					<textarea spellcheck="false" class="form-control" rows="12" cols="115" id="input"> </textarea>
 				</div>

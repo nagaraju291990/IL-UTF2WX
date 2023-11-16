@@ -1,3 +1,12 @@
+window.onload = function() {
+	console.log(window.location.hash)
+    if(!window.location.hash) {
+        window.location = window.location + '#convert';
+        window.location.reload();
+    }
+}
+var numbersConvertFlag = 1;
+
 function utf2wx(lang, text){
 	if(lang == "tel") {
 		out = convert_tel_utf2wx(text);
@@ -17,6 +26,11 @@ function utf2wx(lang, text){
 	return out;
 }
 function wx2utf(lang, text) {
+	if ($('#numbersConvert').is(":checked") ) {
+		numbersConvertFlag = 1;
+	} else {
+		numbersConvertFlag = 0;
+	}
 	if(lang == "tel") {
 		out = convert_tel_wx2utf(text);
 	} else if(lang == "tam") {

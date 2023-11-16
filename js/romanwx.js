@@ -45,7 +45,7 @@ function roman2wx(text) {
     text = text.replace(/s/g, "s");
     text = text.replace(/ṣ/g, "R");
     text = text.replace(/ś/g, "S");
-    text = text.replace(/w/g, "v");
+    //text = text.replace(/v/g, "v");
     text = text.replace(/y/g, "y");
     return text;
 }
