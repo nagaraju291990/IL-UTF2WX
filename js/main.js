@@ -127,7 +127,20 @@ function readFileToString(elem){
 }
 
 function downloadFile(type){
-	var download_text = $("#output").val()
+	var download_text = '';
+	if(type== "source") {
+		download_text = $("#input").val();
+	} else if(type == "target"){
+		download_text = $("#output").val();
+	} else {
+		var src_text = $("#input").val();
+		var tgt_text = $("#output").val();
+		var arr1 = src_text.split("\n");
+		var arr2 = tgt_text.split("\n");
+		for (var i=0;i<arr1.length;i++){
+			download_text += arr1[i] + "\t" + arr2[i] + "\n";
+		}
+	}
 	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "download.txt");
 }
