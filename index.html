@@ -13,6 +13,8 @@
 		<script src="js/romanwx.js"></script>
 		<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist/css/bootstrap.css" />
 		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.js" ></script>
+		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" ></script>
+		<script type="text/javascript" src="js/FileSaver.js" ></script>
 		<link rel="stylesheet" href="css/w3.css">
 		<meta charset="UTF-8"/>
 		<meta name="description" content="Convert between Indian Languages from WX2Unicode, WX2Phonemic and vice-versa. Supported Languages are Assamese, Gujarati, Hindi, Kannada, Malayalam, Oriya, Punjabi, Tamil and Telugu."/>
@@ -32,7 +34,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-8">
+				<div class="col-10">
 					<div class="input-group mb-3">
 				
 					<input class="form-control" type="file" onchange="readFileToString(this.id)" id="formFile">
@@ -52,6 +54,7 @@
 					<label class="form-check-label" for="numbersConvert">
 						&nbsp;Convert Numbers
 					</label>
+
 				</div>
 			</div>
 			<div style="margin-top: 1%;;" class="row">
@@ -72,7 +75,24 @@
 					<textarea spellcheck="false" class="form-control" rows="12" cols="115" id="output"> </textarea>
 				</div>
 			</div>
-			<div class="">
+			<div class="row col-12">
+				<div class="col-7">
+				</div>
+				<div class="col-4">
+					<div class="btn-group">
+						<button class="btn btn-primary" type="button">
+						Download
+						</button>
+						<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="visually-hidden">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu">
+						<li><a class="dropdown-item" onclick="downloadFile();">Download Target</a></li>
+						<li><a class="dropdown-item">Download Source</a></li>
+						<li><a class="dropdown-item">Download Tab separated</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

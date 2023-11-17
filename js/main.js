@@ -118,9 +118,16 @@ function readFileToString(elem){
 	var reader = new FileReader();
   	reader.onload = function() {
 		var text = reader.result;
-		var node = document.getElementById('input');
-		node.innerText = text;
+		//var node = document.getElementById('input');
+		//node.innerText = text;
+		$("#input").val(text);
 		//console.log(reader.result.substring(0, 200));
 	};
 	reader.readAsText(input.files[0]);
+}
+
+function downloadFile(type){
+	var download_text = $("#output").val()
+	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "download.txt");
 }
