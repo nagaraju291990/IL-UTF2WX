@@ -1,3 +1,10 @@
+$(document).ready(function(){
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+});
 window.onload = function() {
 	console.log(window.location.hash)
 	if(!window.location.hash) {
@@ -142,6 +149,13 @@ function downloadFile(type){
 		for (var i=0;i<arr1.length;i++){
 			download_text += arr1[i] + "\t" + arr2[i] + "\n";
 		}
+	}
+	download_text = download_text.trim();
+	if(typeof download_text == "undefined" || download_text == ""){
+		return false;
+	}
+	if(inputFileName == "") {
+		inputFileName = 'transliteration_out.txt';
 	}
 	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
     saveAs(blob, inputFileName);
