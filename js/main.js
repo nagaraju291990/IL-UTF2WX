@@ -113,9 +113,11 @@ function reset(){
 	//$("#lang").val("");
 }
 
+var inputFileName = '';
 function readFileToString(elem){
 	var input = document.getElementById(elem);
 	var reader = new FileReader();
+	inputFileName = input.files[0]['name'].replace(/\.txt/g, "_out.txt");
   	reader.onload = function() {
 		var text = reader.result;
 		//var node = document.getElementById('input');
@@ -142,5 +144,5 @@ function downloadFile(type){
 		}
 	}
 	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "download.txt");
+    saveAs(blob, inputFileName);
 }
