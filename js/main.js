@@ -1,9 +1,9 @@
 window.onload = function() {
 	console.log(window.location.hash)
-    if(!window.location.hash) {
-        window.location = window.location + '#convert';
-        window.location.reload();
-    }
+	if(!window.location.hash) {
+		window.location = window.location + '#convert';
+		window.location.reload();
+	}
 }
 var numbersConvertFlag = 1;
 
@@ -111,4 +111,16 @@ function reset(){
 		//console.log('Thing was not saved to the database.');
 	  }
 	//$("#lang").val("");
+}
+
+function readFileToString(elem){
+	var input = document.getElementById(elem);
+	var reader = new FileReader();
+  	reader.onload = function() {
+		var text = reader.result;
+		var node = document.getElementById('input');
+		node.innerText = text;
+		//console.log(reader.result.substring(0, 200));
+	};
+	reader.readAsText(input.files[0]);
 }

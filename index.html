@@ -32,7 +32,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-3">
+				<div class="col-8">
+					<div class="input-group mb-3">
+				
+					<input class="form-control" type="file" onchange="readFileToString(this.id)" id="formFile">
+					<label for="formFile" class="form-label"></label>
+
 					<select id="lang" class="form-select">
 						<option value="hin">Hindi</option>
 						<option value="kan">Kannada</option>
@@ -42,12 +47,11 @@
 						<option value="tam">Tamil</option>
 						<option selected value="tel">Telugu</option>
 					</select>
-				</div>
-				<div class="col-2">
-					<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
+				
+					&nbsp;<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
 					<label class="form-check-label" for="numbersConvert">
-						Convert Numbers
-  					</label>
+						&nbsp;Convert Numbers
+					</label>
 				</div>
 			</div>
 			<div style="margin-top: 1%;;" class="row">
