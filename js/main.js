@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
 });
@@ -171,5 +171,17 @@ function applyFonts(){
 		$("#input,#output").css("font-family", 'lohittamil');
 	} else if(lang == "hin"){
 		$("#input,#output").css("font-family", 'Lohit Devanagari');
+	}
+}
+
+function showChart(){
+	if ($('#showChart').is(":checked") ) {
+		var lang = $("#lang").val();
+		var func_name = 'view' + lang[0].toUpperCase() + lang[1] +lang[2] + 'Chart()';
+		eval(func_name);
+		$("#chart").show();
+	} else {
+		$("#chart").hide();
+		return;
 	}
 }
