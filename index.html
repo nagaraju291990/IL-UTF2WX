@@ -41,7 +41,7 @@
 					<input title="Upload .txt files" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-control" type="file" onchange="readFileToString(this.id)" accept="*.txt" id="formFile">
 					<label for="formFile" class="form-label"></label>
 
-					<select title="Choose Language" data-bs-toggle="tooltip" data-bs-placement="bottom" id="lang" class="form-select">
+					<select title="Choose Language" data-bs-toggle="tooltip" data-bs-placement="bottom" id="lang" onchange="applyFonts();" class="form-select">
 						<option value="hin">Hindi</option>
 						<option value="kan">Kannada</option>
 						<option value="mal">Malayalam</option>
@@ -52,7 +52,7 @@
 					</select>
 				
 					&nbsp;<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
-					<label class="form-check-label" for="numbersConvert">
+					<label title="If checkbox is checked numbers will be converted to Unicode format" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="numbersConvert">
 						&nbsp;Convert Numbers
 					</label>
 
@@ -60,7 +60,7 @@
 			</div>
 			<div style="margin-top: 1%;;" class="row">
 				<div class="col-sm-5">
-					<textarea title="Input sentence here" data-bs-toggle="tooltip" data-bs-placement="bottom" spellcheck="false" class="form-control" rows="12" cols="115" id="input" placeholder="Input here"> </textarea>
+					<textarea title="Input sentence here" data-bs-toggle="tooltip" data-bs-placement="bottom" spellcheck="false" class="form-control" rows="12" cols="115" id="input" placeholder="Input here"></textarea>
 				</div>
 				<div class="btn-group-vertical col-sm-2">
 					<button class="btn btn-primary" type="button" id="submit" onclick="convert_utf2wx();">Unicode2WX</button>
@@ -81,11 +81,10 @@
 				</div>
 				<div class="col-4">
 					<div class="btn-group">
-						<button title="Download Target text or Source or both in tab separated format" data-bs-toggle="tooltip" data-bs-placement="bottom" onclick="downloadFile('target');" class="btn btn-primary" type="button">
+						<button title="Download Target(default) text or Source or both in tab separated format" data-bs-toggle="tooltip" data-bs-placement="bottom" onclick="downloadFile('target');" class="btn btn-primary" type="button">
 						Download
 						</button>
 						<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-						<span class="visually-hidden">Toggle Dropdown</span>
 						</button>
 						<ul class="dropdown-menu">
 						<li><a class="dropdown-item" onclick="downloadFile('target');">Download Target</a></li>
@@ -93,6 +92,17 @@
 						<li><a class="dropdown-item" onclick="downloadFile('sourcetarget');">Download Tab separated</a></li>
 						</ul>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
+					<label title="If checkbox is checked numbers will be converted to Unicode format" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="numbersConvert">
+						&nbsp;Convert Numbers
+					</label>
+				</div>
+				<div id="chart" class="col-5 offset-md-3">
+
 				</div>
 			</div>
 		</div>

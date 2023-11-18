@@ -113,6 +113,8 @@ function reset(){
 
 		$("#input").val("");
 		$("#output").val("");
+		document.getElementById("formFile").value = null;
+		inputFileName = '';
 	  } else {
 		// Do nothing!
 		//console.log('Thing was not saved to the database.');
@@ -159,4 +161,15 @@ function downloadFile(type){
 	}
 	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
     saveAs(blob, inputFileName);
+}
+
+function applyFonts(){
+	var lang = $("#lang").val();
+	if(lang == "tel") {
+		$("#input,#output").css("font-family", 'telugumandali');
+	} else if(lang == "tam"){
+		$("#input,#output").css("font-family", 'lohittamil');
+	} else if(lang == "hin"){
+		$("#input,#output").css("font-family", 'Lohit Devanagari');
+	}
 }

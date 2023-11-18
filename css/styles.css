@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Lohit Devanagari";
+  font-style: normal;
+  font-weight: 400;
+  /*src: url("//fonts.gstatic.com/ea/lohitdevanagari/v8/Lohit-Devanagari.eot?#iefix") format("embedded-opentype"), url("//fonts.gstatic.com/ea/lohitdevanagari/v8/Lohit-Devanagari.woff2") format("woff2"), url("//fonts.gstatic.com/ea/lohitdevanagari/v8/Lohit-Devanagari.woff") format("woff"), url("//fonts.gstatic.com/ea/lohitdevanagari/v8/Lohit-Devanagari.ttf") format("truetype");*/
+  src: url("../fonts/lohit_hi.ttf");
+}
+@font-face {
+  font-family: "Noto Nastaliq Urdu";
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://d3173a7i5s6jx8.cloudfront.net/assets/noto_nastaliq_urdu/NotoNastaliqUrdu-Regular-54f3265eef84d1848b63d8331233b1c6.eot?#iefixmshcmm") format("embedded-opentype"), url("http://d3173a7i5s6jx8.cloudfront.net/assets/noto_nastaliq_urdu/NotoNastaliqUrdu-Regular-a4c06d1df708d0aef348d6a664a55ca6.woff?mshcmm") format("woff"), url("http://d3173a7i5s6jx8.cloudfront.net/assets/noto_nastaliq_urdu/NotoNastaliqUrdu-Regular-9f8c04943a37a6f38e2ebfbf65b83abe.ttf?mshcmm") format("truetype"), url("http://d3173a7i5s6jx8.cloudfront.net/assets/noto_nastaliq_urdu/NotoNastaliqUrdu-Regular-fc4c997e905802435b05c222f76e5f1a.svg?mshcmm#NotoNastaliqUrdu-Regular") format("svg");
+  //src: url("NotoNastaliqUrdu-Regular.ttf");
+}
+@font-face {
+  font-family: "arabicfont";
+  src: url('../fonts/trado-arabic-bold.ttf');
+  /*src: url('../fonts/trado-arabic.ttf');*/
+}
+@font-face {
+  font-family: "Urdufont1";
+  src: url('../fonts/nwn.ttf');
+}
+@font-face {
+  font-family: "vrindabengali";
+  src: url('../fonts/vrinda-bengali.ttf');
+}
+@font-face {
+  font-family: "shonarbengali";
+  src: url('../fonts/shonar-bengali.ttf');
+}
+@font-face {
+  font-family: "notobengali";
+  src: url('../fonts/NotoSansBengali-Regular.ttf');
+}
+@font-face {
+  font-family: "lohitbengali";
+  src: url('../fonts/Lohit-Bengali.ttf');
+}
+@font-face {
+  font-family: "telugumandali";
+  src: url('../fonts/Mandali-Regular.ttf');
+  /*src: url('../fonts/mallanna.ttf');*/
+}
+@font-face {
+  font-family: "lohitkannada";
+  src: url('../fonts/Lohit-Kannada.ttf');
+  /*src: url('../fonts/mallanna.ttf');*/
+}
+@font-face {
+	font-family: "lohitgujrati";
+	src: url('../fonts/Lohit-Gujarati.ttf');
+	/*src: url('../fonts/mallanna.ttf');*/
+}
+@font-face {
+	font-family: "lohittamil";
+	src: url('../fonts/Lohit-Tamil.ttf');
+}
+@font-face {
+	font-family: "lohitpunjabi";
+	src: url('../fonts/Lohit-Punjabi.ttf');
+}
+@font-face {
+	font-family: "lohitmalyalam";
+	src: url('../fonts/Lohit-Malayalam.ttf');
+}
+@font-face {
+	font-family: "ubuntufont";
+	src: url('../fonts/Ubuntu-Title.ttf');
+}
+/* Code for glyphicons icons */
+@font-face {
+  font-family: 'Code2000';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Code2000/CODE2000.TTF");
+}
+@font-face {
+  font-family: 'SaralaN';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/sarala-devnagari.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'SaralaB';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/sarala-devnagari.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Glego';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Glego.woff2');
+}
+@font-face {
+  font-family: 'MartelN';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Martel.woff2');
+}
