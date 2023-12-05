@@ -47,6 +47,7 @@ function roman2wx(text) {
     text = text.replace(/ś/g, "S");
     //text = text.replace(/v/g, "v");
     text = text.replace(/y/g, "y");
+    text = text.replace(/ṃ/g, "M");
     return text;
 }
 
@@ -120,6 +121,7 @@ function wx2roman(text) {
     text = text.replace(/S/g, "ś");
     text = text.replace(/v/g, "v");
     text = text.replace(/y/g, "y");
+    text = text.replace(/M/g, "ṃ");
 
     return text;
 }
