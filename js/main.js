@@ -55,6 +55,12 @@ function wx2utf(lang, text) {
 	}
 	return out;
 }
+function transliteration(){
+	var text = $("#input").val();
+	var lang = $("#lang").val();
+	var lang2 = $("#lang2").val();
+	
+}
 
 function convert_utf2wx() {
 	var text = $("#input").val();

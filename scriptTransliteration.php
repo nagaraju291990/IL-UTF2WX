@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Conversion for Indian Languages. Formats supported are WX,Phonemic(Roman), Unicode</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/tel.js"></script>
+		<script src="js/tam.js"></script>
+		<script src="js/hin.js"></script>
+		<script src="js/mal.js"></script>
+		<script src="js/kan.js"></script>
+		<script src="js/ori.js"></script>
+		<script src="js/pan.js"></script>
+		<script src="js/romanwx.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-5.3.1-dist/css/bootstrap.css" />
+		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.js" ></script>
+		<script type="text/javascript" src="bootstrap-5.3.1-dist/js/bootstrap.bundle.js" ></script>
+		<script type="text/javascript" src="js/FileSaver.js" ></script>
+		<link rel="stylesheet" href="css/w3.css">
+		<meta charset="UTF-8"/>
+		<meta name="description" content="Convert between Indian Languages from WX2Unicode, WX2Phonemic and vice-versa. Supported Languages are Assamese, Gujarati, Hindi, Kannada, Malayalam, Oriya, Punjabi, Tamil and Telugu."/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta property="og:title" content="Conversion for Indian Languages. Formats supported are WX,Phonemic(Roman), Unicode" />
+		<meta property="og:description" content="Convert between Indian Languages from WX2Unicode, WX2Phonemic and vice-versa. Supported Languages are Assamese, Gujarati, Hindi, Kannada, Malayalam, Oriya, Punjabi, Tamil and Telugu." />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3 align="center">Indian Language Transliteration Tool </h3>
+					<h6 align="center">Unicode&lt;=&gt;WX&lt;=&gt;Phonemic(Roman)&lt;=&gt;Unicode</h6>
+				</div>
+				<div style="margin-left: 90%;" class="col-1">
+					<span style="font-size: 12px;">Version 3.0</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="input-group mb-6">
+				
+					<input title="Upload .txt files" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-control" type="file" onchange="readFileToString(this.id)" accept="*.txt" id="formFile">
+					<label for="formFile" class="form-label"> </label>
+
+					<select title="Choose Language" data-bs-toggle="tooltip" data-bs-placement="bottom" id="lang" onchange="applyFonts();showChart();" class="form-select">
+						<option value="hin">Hindi</option>
+						<option value="kan">Kannada</option>
+						<option value="mal">Malayalam</option>
+						<option value="ori">Oriya</option>
+						<option value="pan">Punjabi</option>
+						<option selected  value="tam">Tamil</option>
+						<option  value="tel">Telugu</option>
+					</select>
+					<select title="Choose Target Language" data-bs-toggle="tooltip" data-bs-placement="bottom" id="tgtlang" onchange="applyFonts();" class="form-select">
+						<option value="hin">Hindi</option>
+						<option value="kan">Kannada</option>
+						<option value="mal">Malayalam</option>
+						<option value="ori">Oriya</option>
+						<option value="pan">Punjabi</option>
+						<option value="tam">Tamil</option>
+						<option selected value="tel">Telugu</option>
+					</select>
+				
+					&nbsp;<input class="form-check-input" checked type="checkbox" value="" id="numbersConvert">
+					<label title="If checkbox is checked numbers will be converted to Unicode format" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="numbersConvert">
+						&nbsp;Convert Numbers
+					</label>
+
+				</div>
+			</div>
+			<div style="margin-top: 1%;;" class="row">
+				<div class="col-sm-5">
+					<textarea title="Input sentence here" data-bs-toggle="tooltip" data-bs-placement="bottom" spellcheck="false" class="form-control" rows="12" cols="115" id="input" placeholder="Input here"></textarea>
+				</div>
+				<div class="btn-group-vertical col-sm-2">
+					<button class="btn btn-primary" type="button" id="submit" onclick="transliteration();">Transliterate</button>
+					<button title="Swap input and output text" data-bs-toggle="tooltip" data-bs-placement="right" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
+					<button title="Clear all input fields" data-bs-toggle="tooltip" data-bs-placement="right" class="btn btn-dark" type="button" id="resetinputs" onclick="reset();">Reset</i></button>
+				</div>
+				<div class="col-sm-5">
+					<textarea spellcheck="false" class="form-control" rows="12" cols="115" id="output"> </textarea>
+				</div>
+			</div>
+			<div class="row col-12">
+				<div class="col-7">
+				</div>
+				<div class="col-4">
+					<div class="btn-group">
+						<button title="Download Target(default) text or Source or both in tab separated format" data-bs-toggle="tooltip" data-bs-placement="bottom" onclick="downloadFile('target');" class="btn btn-primary" type="button">
+						Download
+						</button>
+						<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+						</button>
+						<ul class="dropdown-menu">
+						<li><a class="dropdown-item" onclick="downloadFile('target');">Download Target</a></li>
+						<li><a class="dropdown-item" onclick="downloadFile('source');">Download Source</a></li>
+						<li><a class="dropdown-item" onclick="downloadFile('sourcetarget');">Download Tab separated</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<input class="form-check-input" type="checkbox" value="" onclick="showChart();" id="showChart">
+					<label title="If checkbox is WX mapping will be showed" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="showChart">
+						View WX mapping chart
+					</label>
+				</div>
+				<div id="chart" class="col-5">
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
