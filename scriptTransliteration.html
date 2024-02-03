@@ -28,7 +28,7 @@
 			<div class="row">
 				<div class="col-12">
 					<h3 align="center">Indian Language Transliteration Tool </h3>
-					<h6 align="center">Unicode&lt;=&gt;WX&lt;=&gt;Phonemic(Roman)&lt;=&gt;Unicode</h6>
+					<!-- <h6 align="center">Unicode&lt;=&gt;WX&lt;=&gt;Phonemic(Roman)&lt;=&gt;Unicode</h6> -->
 				</div>
 				<div style="margin-left: 90%;" class="col-1">
 					<span style="font-size: 12px;">Version 3.0</span>
@@ -79,17 +79,16 @@
 				<div class="col-sm-6">
 					<textarea spellcheck="false" class="form-control" rows="12" cols="115" id="output"> </textarea>
 				</div>
-
-				<div style="margin-left: 40%;" class="cols-sm-5" >
-					<button class="btn btn-primary" type="button" id="submit" onclick="transliteration();">Transliterate</button>
-					<button title="Swap input and output text" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
-					<button title="Clear all input fields" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-dark" type="button" id="resetinputs" onclick="reset();">Reset</i></button>
-				</div>
 			</div>
 			<div class="row col-12">
-				<div class="col-7">
+				<div class="col-8">
+					<div style="margin-left: 60%;" class="cols-sm-5" >
+						<button class="btn btn-primary" type="button" id="submit" onclick="transliteration();">Transliterate</button>
+						<button title="Swap input and output text" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
+						<button title="Clear all input fields" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-dark" type="button" id="resetinputs" onclick="reset();">Reset</i></button>
+					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-2">
 					<div class="btn-group">
 						<button title="Download Target(default) text or Source or both in tab separated format" data-bs-toggle="tooltip" data-bs-placement="bottom" onclick="downloadFile('target');" class="btn btn-primary" type="button">
 						Download
@@ -104,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-3">
 					<input class="form-check-input" type="checkbox" value="" onclick="showChart();" id="showChart">
 					<label title="If checkbox is WX mapping will be showed" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="showChart">
@@ -114,7 +113,7 @@
 				<div id="chart" class="col-5">
 
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</body>
 </html>
