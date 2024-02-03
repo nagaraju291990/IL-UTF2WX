@@ -50,6 +50,10 @@
 						<option selected  value="tam">Tamil</option>
 						<option  value="tel">Telugu</option>
 					</select>
+					</div>
+					</div>
+					<div class="col-6">
+					<div class="input-group mb-6">
 					<select title="Choose Target Language" data-bs-toggle="tooltip" data-bs-placement="bottom" id="tgtlang" onchange="applyFonts();" class="form-select">
 						<option value="hin">Hindi</option>
 						<option value="kan">Kannada</option>
@@ -64,20 +68,22 @@
 					<label title="If checkbox is checked numbers will be converted to Unicode format" data-bs-toggle="tooltip" data-bs-placement="bottom" class="form-check-label" for="numbersConvert">
 						&nbsp;Convert Numbers
 					</label>
+					</div>
 
 				</div>
 			</div>
 			<div style="margin-top: 1%;;" class="row">
-				<div class="col-sm-5">
+				<div class="col-sm-6">
 					<textarea title="Input sentence here" data-bs-toggle="tooltip" data-bs-placement="bottom" spellcheck="false" class="form-control" rows="12" cols="115" id="input" placeholder="Input here"></textarea>
 				</div>
-				<div class="btn-group-vertical col-sm-2">
-					<button class="btn btn-primary" type="button" id="submit" onclick="transliteration();">Transliterate</button>
-					<button title="Swap input and output text" data-bs-toggle="tooltip" data-bs-placement="right" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
-					<button title="Clear all input fields" data-bs-toggle="tooltip" data-bs-placement="right" class="btn btn-dark" type="button" id="resetinputs" onclick="reset();">Reset</i></button>
-				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-6">
 					<textarea spellcheck="false" class="form-control" rows="12" cols="115" id="output"> </textarea>
+				</div>
+
+				<div style="margin-left: 40%;" class="cols-sm-5" >
+					<button class="btn btn-primary" type="button" id="submit" onclick="transliteration();">Transliterate</button>
+					<button title="Swap input and output text" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-light" type="button" id="interchange" onclick="interchangeInpOut();">Swap I/O</i></button>
+					<button title="Clear all input fields" data-bs-toggle="tooltip" data-bs-placement="bottom" class="btn btn-dark" type="button" id="resetinputs" onclick="reset();">Reset</i></button>
 				</div>
 			</div>
 			<div class="row col-12">

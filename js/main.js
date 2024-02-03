@@ -58,8 +58,14 @@ function wx2utf(lang, text) {
 function transliteration(){
 	var text = $("#input").val();
 	var lang = $("#lang").val();
-	var lang2 = $("#lang2").val();
-	
+	var tgtlang = $("#tgtlang").val();
+
+	//get WX of source language
+	var out_text1 = utf2wx(lang, text);
+
+	//get utf of target language
+	var out_text2 = wx2utf(tgtlang, out_text1);
+	$("#output").val(out_text2);
 }
 
 function convert_utf2wx() {
