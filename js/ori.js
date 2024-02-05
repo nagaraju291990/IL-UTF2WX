@@ -73,8 +73,8 @@ function convert_ori_wx2utf(text) {
 	unicodeValue["?"] = '63';	//?
 	unicodeValue["<"] = '<';	//<
 	unicodeValue[">"] = '>';	//>
-	unicodeValue["["] = '91';	//[
-	unicodeValue["]"] = '93';	//]
+	unicodeValue["["] = '[';	//[
+	unicodeValue["]"] = ']';	//]
 	unicodeValue["{"] = '123';	//{
 	unicodeValue["}"] = '125';	//}
 	unicodeValue["("] = '40';	//(

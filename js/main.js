@@ -63,6 +63,13 @@ function transliteration(){
 	//get WX of source language
 	var out_text1 = utf2wx(lang, text);
 
+	if(lang == "tam"){
+		out_text1 = out_text1.replace(/nY/g, "n");
+		out_text1 = out_text1.replace(/rY/g, "r");
+		out_text1 = out_text1.replace(/lYY/g, "lY");
+		out_text1 = out_text1.replace(/H/g, "");	
+	}
+
 	//get utf of target language
 	var out_text2 = wx2utf(tgtlang, out_text1);
 	$("#output").val(out_text2);
@@ -172,7 +179,7 @@ function downloadFile(type){
 		inputFileName = 'transliteration_out.txt';
 	}
 	var blob = new Blob([download_text], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, inputFileName);
+	saveAs(blob, inputFileName);
 }
 
 function applyFonts(){
@@ -183,6 +190,16 @@ function applyFonts(){
 		$("#input,#output").css("font-family", 'lohittamil');
 	} else if(lang == "hin"){
 		$("#input,#output").css("font-family", 'Lohit Devanagari');
+	}
+	var lang2 = $("#tgtlang").val();
+	if(typeof lang2 != "undefined" && lang2 != "") {
+		if(lang2 == "tel") {
+			$("#output").css("font-family", 'telugumandali');
+		} else if(lang == "tam"){
+			$("#output").css("font-family", 'lohittamil');
+		} else if(lang == "hin"){
+			$("#output").css("font-family", 'Lohit Devanagari');
+		}
 	}
 }
 

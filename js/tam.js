@@ -78,8 +78,8 @@ function convert_tam_wx2utf(text) {
 	unicodeValue["?"] = '63';	//?
 	unicodeValue["<"] = '<';	//<
 	unicodeValue[">"] = '>';	//>
-	unicodeValue["["] = '91';	//[
-	unicodeValue["]"] = '93';	//]
+	unicodeValue["["] = '[';	//[
+	unicodeValue["]"] = ']';	//]
 	unicodeValue["{"] = '123';	//{
 	unicodeValue["}"] = '125';	//}
 	unicodeValue["("] = '40';	//(
@@ -772,25 +772,46 @@ function convert_tam_wx2utf(text) {
 		return unicodeValue_vowels["aO"];
 	});
 
-	console.log("Iam here"+text);
-	text = text.replace(/([A-z])/g, function(a) {
-		//console.log(a);
-		//if(typeof unicodeValue_vowels[a] != "undefined") 
-		if(a in unicodeValue_vowels) {
-			return chr = unicodeValue_vowels[a];
+	console.log("Iam here2"+text);
+	if(numbersConvertFlag == 1) {
+		// console.log("Iam here"+text);
+			text = text.replace(/([A-z0-9])/g, function(a) {
+				//console.log(a);
+				//if(typeof unicodeValue_vowels[a] != "undefined") 
+				if(a in unicodeValue_vowels) {
+					return chr = unicodeValue_vowels[a];
+				} else {
+					return a;
+				}
+			});
+			//console.log("Iam here2"+text);
+			text = text.replace(/([A-z0-9])+/g, function(a) {
+				if(a in unicodeValue) {
+					return chr = unicodeValue[a];
+				} else {
+					return a;
+				}
+			});
 		} else {
-			return a;
+			text = text.replace(/([A-z])/g, function(a) {
+				//console.log(a);
+				//if(typeof unicodeValue_vowels[a] != "undefined") 
+				if(a in unicodeValue_vowels) {
+					return chr = unicodeValue_vowels[a];
+				} else {
+					return a;
+				}
+			});
+			//console.log("Iam here2"+text);
+			text = text.replace(/([A-z])+/g, function(a) {
+				if(a in unicodeValue) {
+					return chr = unicodeValue[a];
+				} else {
+					return a;
+				}
+			});
 		}
-	});
-	
-	text = text.replace(/([A-z])+/g, function(a) {
-		if(a in unicodeValue) {
-			return chr = unicodeValue[a];
-		} else {
-			return a;
-		}
-	});
-	
+	console.log("Iam here3"+text);
 	return text;
 	//$("#output").val(text);
 
