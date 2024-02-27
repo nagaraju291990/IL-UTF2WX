@@ -161,7 +161,7 @@ function convert_pan_wx2utf(text) {
 	//unicodeValue["V"] = 'V';	//V
 	unicodeValue["W"] = '\u0A25';	//W
 	unicodeValue["X"] = '\u0A27';	//X
-	unicodeValue["Y"] = '\u0A3D';	//Y
+	unicodeValue["Y"] = '\u0A71';	//Y
 	unicodeValue["Z"] = '\u0A3C';	//Z
 	//unicodeValue[89] = '\u0A26';
 	//unicodeValue[90] = '\u0A01';
@@ -734,7 +734,7 @@ function convert_pan_utf2wx(text) {
 	//unicodeValue["V"] = 'V';	//V
 	unicodeValue["\u0A25"] = 'W';	//W
 	unicodeValue["\u0A27"] = 'X';	//X
-	unicodeValue["\u0A3D"] = 'Y';	//Y
+	unicodeValue["\u0A71"] = 'Y';	//Y
 	unicodeValue["\u0A3C"] = 'Z';	//Z
 	//unicodeValue[89] = '\u0A26';
 	//unicodeValue[90] = '\u0A01';

@@ -200,12 +200,13 @@ function convert_tel_wx2utf(text) {
 	});
 
     text=text.replace(/(lY)([AiIuUeEoO])([MHz])/g, function() {
-		return unicodeValue[arguments[1]] + unicodeValue_vowels[arguments[2]] + unicodeValue[3];
+		return unicodeValue[arguments[1]] + unicodeValue[arguments[2]] + unicodeValue[3];
 	});
 
     text=text.replace(/(lY)([AiIuUeEoO])/g, function(){
-		return unicodeValue[arguments[1]] + unicodeValue_vowels[arguments[2]];
+		return unicodeValue[arguments[1]] + unicodeValue[arguments[2]];
 	});
+
 
     text=text.replace(/(lY)a([MHz])/g, function() {
 		return unicodeValue[arguments[1]] + unicodeValue[arguments[2]];
@@ -566,6 +567,7 @@ function convert_tel_wx2utf(text) {
 		return unicodeValue_vowels["aO"];
 	});
 
+	console.log(text);
 	if(numbersConvertFlag == 1) {
 	// console.log("Iam here"+text);
 		text = text.replace(/([A-z0-9])/g, function(a) {
