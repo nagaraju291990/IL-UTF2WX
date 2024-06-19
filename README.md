@@ -18,14 +18,14 @@
 - Punjabi
 - Malayalam
 
-### Features supported
-- Browser file
-- Copy/Paste input
+### Features
+- Browse a file with .txt extension
+- Copy/Paste input into the textarea
 - Swap Input/Output
-- Reset all fields
-- Download
-	- Source and Target(Tab seperated)
-	- Only Target
-	- Only Source
-- Can view WX chart for Hindi, Telugu and Tamil
-- Built completely in Javascript
+- Reset(*Clear*) all fields
+- Download options
+	- Source and Target(_Tab seperated_)
+	- Only _Target_
+	- Only _Source_
+- View WX mapping chart for **Hindi**, **Telugu** and **Tamil**
+- Built in **Javascript** eliminating server side implementation
