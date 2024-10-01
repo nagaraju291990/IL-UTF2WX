@@ -773,7 +773,7 @@ function convert_guj_wx2utf(text) {
 	});
 
 	console.log("Iam here"+text);
-	text = text.replace(/([A-z])/g, function(a) {
+	text = text.replace(/([a-zA-Z])/g, function(a) {
 		//console.log(a);
 		//if(typeof unicodeValue_vowels[a] != "undefined") 
 		if(a in unicodeValue_vowels) {
@@ -783,7 +783,7 @@ function convert_guj_wx2utf(text) {
 		}
 	});
 	
-	text = text.replace(/([A-z])+/g, function(a) {
+	text = text.replace(/([a-zA-Z])+/g, function(a) {
 		if(a in unicodeValue) {
 			return chr = unicodeValue[a];
 		} else {
