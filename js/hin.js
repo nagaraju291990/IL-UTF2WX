@@ -380,7 +380,7 @@ function convert_hin_wx2utf(text) {
 		return unicodeValue_vowels["q"];
 	});
 	//console.log("Iam here"+text);
-	text = text.replace(/([A-z])/g, function(a) {
+	text = text.replace(/([A-Za-z])/g, function(a) {
 		//console.log(a);
 		//if(typeof unicodeValue_vowels[a] != "undefined") 
 		if(a in unicodeValue_vowels) {
@@ -390,7 +390,7 @@ function convert_hin_wx2utf(text) {
 		}
 	});
 	//console.log("Iam here2"+text);
-	text = text.replace(/([A-z])+/g, function(a) {
+	text = text.replace(/([A-Za-z])+/g, function(a) {
 		if(a in unicodeValue) {
 			return chr = unicodeValue[a];
 		} else {

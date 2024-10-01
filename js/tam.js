@@ -793,7 +793,7 @@ function convert_tam_wx2utf(text) {
 				}
 			});
 		} else {
-			text = text.replace(/([A-z])/g, function(a) {
+			text = text.replace(/([A-Za-z])/g, function(a) {
 				//console.log(a);
 				//if(typeof unicodeValue_vowels[a] != "undefined") 
 				if(a in unicodeValue_vowels) {
@@ -803,7 +803,7 @@ function convert_tam_wx2utf(text) {
 				}
 			});
 			//console.log("Iam here2"+text);
-			text = text.replace(/([A-z])+/g, function(a) {
+			text = text.replace(/([A-Za-z])+/g, function(a) {
 				if(a in unicodeValue) {
 					return chr = unicodeValue[a];
 				} else {
