@@ -570,7 +570,7 @@ function convert_tel_wx2utf(text) {
 	console.log(text);
 	if(numbersConvertFlag == 1) {
 	// console.log("Iam here"+text);
-		text = text.replace(/([A-z0-9])/g, function(a) {
+		text = text.replace(/([A-Za-z0-9])/g, function(a) {
 			//console.log(a);
 			//if(typeof unicodeValue_vowels[a] != "undefined") 
 			if(a in unicodeValue_vowels) {
@@ -580,7 +580,7 @@ function convert_tel_wx2utf(text) {
 			}
 		});
 		//console.log("Iam here2"+text);
-		text = text.replace(/([A-z0-9])+/g, function(a) {
+		text = text.replace(/([A-Za-z0-9])+/g, function(a) {
 			if(a in unicodeValue) {
 				return chr = unicodeValue[a];
 			} else {

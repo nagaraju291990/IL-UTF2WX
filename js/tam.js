@@ -635,10 +635,10 @@ function convert_tam_wx2utf(text) {
 		return unicodeValue[arguments[1]]+unicodeValue["q"];
 	});
 
-	var r1 =/([kKgGfcCjJFtTdDNwWxXnpPbBmyrlvSsRh])/g;
-	text = text.replace(r1,function(){
-		return unicodeValue[arguments[1]]+unicodeValue["_"];
-	});
+	// var r1 =/([kKgGfcCjJFtTdDNwWxXnpPbBmyrlvSsRh])/g;
+	// text = text.replace(r1,function(){
+	// 	return unicodeValue[arguments[1]]+unicodeValue["_"];
+	// });
 
 	var r1 =/(aq)([MHz])/g;
 	text = text.replace(r1,function(){
@@ -785,7 +785,7 @@ function convert_tam_wx2utf(text) {
 				}
 			});
 			//console.log("Iam here2"+text);
-			text = text.replace(/([A-z0-9])+/g, function(a) {
+			text = text.replace(/([a-zA-Z0-9])+/g, function(a) {
 				if(a in unicodeValue) {
 					return chr = unicodeValue[a];
 				} else {
@@ -793,7 +793,7 @@ function convert_tam_wx2utf(text) {
 				}
 			});
 		} else {
-			text = text.replace(/([A-Za-z])/g, function(a) {
+			text = text.replace(/([a-zA-Z])/g, function(a) {
 				//console.log(a);
 				//if(typeof unicodeValue_vowels[a] != "undefined") 
 				if(a in unicodeValue_vowels) {
@@ -803,7 +803,7 @@ function convert_tam_wx2utf(text) {
 				}
 			});
 			//console.log("Iam here2"+text);
-			text = text.replace(/([A-Za-z])+/g, function(a) {
+			text = text.replace(/(a-zA-Z])+/g, function(a) {
 				if(a in unicodeValue) {
 					return chr = unicodeValue[a];
 				} else {
