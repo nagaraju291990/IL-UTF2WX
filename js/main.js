@@ -27,6 +27,8 @@ function utf2wx(lang, text){
 			out = convert_pan_utf2wx(text);
 	} else if(lang == "tam") {
 		out = convert_tam_utf2wx(text);
+	} else if(lang == "guj") {
+		out = convert_guj_utf2wx(text);
 	} else {
 		out = convert_hin_utf2wx(text);
 	}
@@ -46,6 +48,8 @@ function wx2utf(lang, text) {
 		out = convert_mal_wx2utf(text);
 	} else if(lang == "kan") {
 		out = convert_kan_wx2utf(text);
+	} else if(lang == "guj") {
+		out = convert_guj_wx2utf(text);
 	} else if(lang == "ori") {
 		out = convert_ori_wx2utf(text);
 	} else if(lang == "pan") {
