@@ -635,10 +635,10 @@ function convert_tam_wx2utf(text) {
 		return unicodeValue[arguments[1]]+unicodeValue["q"];
 	});
 
-	// var r1 =/([kKgGfcCjJFtTdDNwWxXnpPbBmyrlvSsRh])/g;
-	// text = text.replace(r1,function(){
-	// 	return unicodeValue[arguments[1]]+unicodeValue["_"];
-	// });
+	var r1 =/([kKgGfcCjJFtTdDNwWxXnpPbBmyrlvSsRh])/g;
+	text = text.replace(r1,function(){
+		return unicodeValue[arguments[1]]+unicodeValue["_"];
+	});
 
 	var r1 =/(aq)([MHz])/g;
 	text = text.replace(r1,function(){
